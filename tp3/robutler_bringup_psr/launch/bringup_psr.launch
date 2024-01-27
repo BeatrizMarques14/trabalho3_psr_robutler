@@ -14,12 +14,12 @@
 
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model robutler -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
 
-    <!-- <group if="$(arg use_navigation)">
-        <include file="$(find robutler_navigation)/launch/localization.launch">
+    <group if="$(arg use_navigation)">
+        <include file="$(find robutler_navigation_psr)/launch/localization.launch">
         </include>
-        <include file="$(find robutler_navigation)/launch/navigation.launch">
+        <include file="$(find robutler_navigation_psr)/launch/navigation.launch">
         </include>
-    </group> -->
+    </group>
 
 
 

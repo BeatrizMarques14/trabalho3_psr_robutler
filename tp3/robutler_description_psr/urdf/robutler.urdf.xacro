@@ -186,14 +186,28 @@
   </link>
 
   <joint name="camera_joint" type="fixed">
-    <origin xyz="0.073 -0.011 0.084" rpy="0 0 0"/>
+    <origin xyz="0.073 -0.011 0.584" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="camera_link"/>
   </joint>
 
   <link name="camera_link">
+    <visual>
+      <origin xyz="-0.2 0.011 -0.3" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="0.584" radius="0.01"/>
+      </geometry>
+      <material name="dark"/>
+    </visual>
+    <visual>
+      <origin xyz="-0.2 0.011 0.01" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.1 0.05 0.05" />
+      </geometry>
+      <material name="dark"/>
+    </visual>
     <collision>
-      <origin xyz="0.005 0.011 0.013" rpy="0 0 0"/>
+      <origin xyz="-0.2 0.011 -0.3" rpy="0 0 0"/>
       <geometry>
         <box size="0.015 0.030 0.027"/>
       </geometry>
@@ -201,7 +215,7 @@
   </link>
 
   <joint name="camera_rgb_joint" type="fixed">
-    <origin xyz="0.003 0.011 0.009" rpy="0 0 0"/>
+    <origin xyz="-0.2 0.011 0.009" rpy="0 0 0"/>
     <parent link="camera_link"/>
     <child link="camera_rgb_frame"/>
   </joint>
@@ -214,93 +228,8 @@
   </joint>
   <link name="camera_rgb_optical_frame"/>
 
-  <!-- <joint name="camera2_joint" type="fixed">
-    <origin xyz="0 0 0.84" rpy="0 0 0"/>
-    <parent link="base_scan"/>
-    <child link="camera2_link"/>
-  </joint>
-
-  <link name="camera2_link">
-  <visual>
-    <origin xyz="0 0 0.13" rpy="0 0 0"/>
-    <geometry>
-      <box size="0.015 0.030 0.027"/>
-    </geometry>
-  </visual>
-  <collision>
-    <origin xyz="0 0 0.13" rpy="0 0 0"/>
-    <geometry>
-      <box size="0.015 0.030 0.027"/>
-    </geometry>
-  </collision>
-</link> -->
 
 
-  <!-- <joint name="camera_rgb_joint_2" type="fixed">
-    <origin xyz="0 0 0.09" rpy="0 0 0"/>
-    <parent link="camera2_link"/>
-    <child link="camera2_rgb_frame"/>
-  </joint>
-  <link name="camera2_rgb_frame"/>
-
-  <joint name="camera2_rgb_optical_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="-1.57 0 -1.57"/>
-    <parent link="camera2_rgb_frame"/>
-    <child link="camera2_rgb_optical_frame"/>
-  </joint>
-  <link name="camera2_rgb_optical_frame"/>
-
-  
-  <joint name="connecting_rod_joint" type="fixed">
-    <origin xyz="-0.015 0 0.42" rpy="0 0 0"/> 
-    <parent link="base_scan"/>
-    <child link="connecting_rod_link"/>
-  </joint>
-
-  
-  <link name="connecting_rod_link">
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <cylinder length="0.42" radius="0.01"/> 
-      </geometry>
-      <material name="dark"/>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <cylinder length="0.42" radius="0.01"/>
-      </geometry>
-    </collision>
-  </link>
-
- 
-  <joint name="rod_to_camera2_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="0 0 0"/> 
-    <parent link="connecting_rod_link"/>
-    <child link="camera2_link"/>
-  </joint> -->
-
-  <!-- Joint do cilindro -->
-<joint name="cylinder_joint" type="fixed">
-  <origin xyz="0 0 0.42" rpy="0 0 0"/> <!-- Ajuste as coordenadas X e Y conforme necessário -->
-  <parent link="base_link"/>
-  <child link="cylinder_link"/>
-</joint>
-
-<!-- Link do cilindro -->
-<link name="cylinder_link">
-  <visual>
-    <geometry>
-      <cylinder length="0.84" radius="0.01"/> <!-- Ajuste o raio conforme necessário -->
-    </geometry>
-  </visual>
-  <collision>
-    <geometry>
-      <cylinder length="0.84" radius="0.01"/>
-    </geometry>
-  </collision>
-</link>
 
 
 
