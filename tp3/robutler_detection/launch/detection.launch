@@ -1,7 +1,6 @@
 <launch>
-    <!-- launch yolov7 -->
-    <include file="$(find robutler_detection)/launch/yolov7.launch">
-    </include>
+    
+    </include> -->
     <!-- launch color detection -->
     <node name="detect_color" pkg="robutler_detection" type="detect_color.py"/>
 </launch>
