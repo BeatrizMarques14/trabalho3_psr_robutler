@@ -317,7 +317,7 @@ def findObjectLocation(feedback):
 
 def isTableClean(feedback):
     
-    moveTo(feedback, x=4.582840, y=0.194559, z=0,R=-0.000007, P=0.003198, Y=0.695034, location='kitchen', goal_publisher=goal_publisher)
+    moveTo(feedback, x=4.335937, y=1.164780, z=0,R=-0.000007, P=0.003198, Y=-0.006472, location='kitchen', goal_publisher=goal_publisher)
 
     #search for violet
     bashCommand = "rosrun robutler_detection detect_color.py violet"
