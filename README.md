@@ -8,3 +8,18 @@
 
 
 **É possivel adicionar uma pessoa na casa, mas esta não é reconhecida pelo robô.
+
+  Para iniciar o robô é necessário inserir dois comandos no terminal
+  
+    roslaunch robutler_bringup_psr gazebo.launch
+
+    roslaunch robutler_bringup_psr bringup.launch
+
+  Estes dois comandos irão iniciar a simulação da casa e o rviz onde se irão ver as mensagens do robô e também controlá-lo.
+  De seguida, para controlar o robô manualmente é necessário inserir o seguinte comando no terminal:
+
+    roslaunch robutler_teleop robutler_teleop_key.launch
+
+  Para inserir o menu interativo no robô de modo a poder realizar as missões, é necessário inserir o seguinte comando no terminal:
+
+    roslaunch robutler_menu launch.launch
